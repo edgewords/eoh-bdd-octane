@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features version="1"><feature name="Add Items to Cart" path="src\test\java\features\Add Items to Cart_5054.feature" started="1542626438817" tag="@TID5054REV0.2.0"><file><![CDATA[#Auto generated Octane revision tag
+@TID5054REV0.2.0
+Feature: Add Items to Cart
+
+	Scenario: Add a Cap
+		Given That I am on the Home Page
+		When I search for a Cap and add it to the Cart
+		Then I can see it in the Cart
+]]></file><scenarios><scenario name="Add a Cap"><steps><step duration="5385482200" name="Given That I am on the Home Page" status="passed"/><step duration="4565572400" name="When I search for a Cap and add it to the Cart" status="passed"/><step duration="5893593800" name="Then I can see it in the Cart" status="passed"/></steps></scenario></scenarios></feature></features>

@@ -4,8 +4,9 @@ import org.junit.runner.RunWith;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
+import com.hpe.alm.octane.OctaneCucumber;
 
-@RunWith (Cucumber.class)
+@RunWith (OctaneCucumber.class)
 @CucumberOptions(
 		plugin = {"html:reports/cucumber-html-report",
 				"json:reports/cucumber.json",
