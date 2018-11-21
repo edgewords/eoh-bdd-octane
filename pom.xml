@@ -64,6 +64,9 @@
 				<includes>
 					<include>MyRunner.java</include>
 				</includes>
+				<systemPropertyVariables>
+           			<browser>${browser}</browser>
+        		</systemPropertyVariables>
 			</configuration>			
   		</plugin>
   	</plugins>  

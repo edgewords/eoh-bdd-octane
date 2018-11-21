@@ -8,8 +8,9 @@ import com.hpe.alm.octane.OctaneCucumber;
 
 @RunWith (OctaneCucumber.class)
 @CucumberOptions(
-		plugin = {"junit:reports/TestResult.xml",
-				"html:reports/cucumber-html-report",
+		plugin = {"pretty",
+				"junit:reports/TestResult.xml",
+				"html:reports/cucumber-html-report.html",
 				"json:reports/cucumber.json",
 				},
 		//tags = {"@functional"},

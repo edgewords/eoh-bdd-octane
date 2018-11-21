@@ -12,6 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class add_items_to_cart_steps {
 	
@@ -19,7 +20,14 @@ public class add_items_to_cart_steps {
 	
 	@Given("^That I am on the Home Page$")
 	public void that_I_am_on_the_Home_Page() throws Throwable {
-		driver = new ChromeDriver(); //instantiate a browser
+		String browser = System.getProperty("browser");
+	    System.out.println("Browser passed through is : " + browser);
+	    if (browser.equalsIgnoreCase("chrome")) {
+	    	driver = new ChromeDriver(); //instantiate a browser
+	    }
+	    else {
+	    	driver = new FirefoxDriver();
+	    }
 		driver.get("https://www.edgewordstraining.co.uk/demo-site/");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.linkText("Dismiss")).click();
