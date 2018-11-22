@@ -10,7 +10,7 @@ import com.hpe.alm.octane.OctaneCucumber;
 @CucumberOptions(
 		plugin = {"pretty",
 				"junit:reports/TestResult.xml",
-				"html:reports/cucumber-html-report.html",
+				"html:reports/cucumber-html-report",
 				"json:reports/cucumber.json",
 				},
 		//tags = {"@functional"},
