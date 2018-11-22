@@ -48,7 +48,7 @@ public class add_items_to_cart_steps {
 		driver.findElement(By.linkText("Cart")).click();
 		Thread.sleep(2000);
 		//check it is there
-		assertTrue (driver.findElement(By.linkText("Cap")).isDisplayed());
+		assertTrue (driver.findElement(By.linkText("Captain")).isDisplayed());
 	    driver.findElement(By.linkText("×")).click();
 	    driver.findElement(By.linkText("Return to shop")).click();
 	    driver.quit();
