@@ -1,5 +1,5 @@
 #Auto generated Octane revision tag
-@TID5054REV0.5.1
+@TID5054REV0.6.0
 Feature: Add Items to Cart
 
 	Scenario: Add a Cap
