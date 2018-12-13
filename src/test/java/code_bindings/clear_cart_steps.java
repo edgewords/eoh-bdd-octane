@@ -26,7 +26,7 @@ public class clear_cart_steps {
 	public void the_cart_should_be_empty() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new PendingException();
-		assertTrue(true);
+		assertTrue(false);
 	}
 
 }
