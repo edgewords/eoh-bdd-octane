@@ -11,11 +11,9 @@ pipeline {
         echo 'Initialization'
       }
     }
-    stage('Build') {
+    stage('Test') {
       steps {
-        sh '''mvn clean test -Dbrowser=firefox
-'''
-        bat 'mvn clean test -Dbrowser=firefox'
+        bat(script: 'mvn clean test -Dbrowser=firefox', returnStatus: true, returnStdout: true)
       }
     }
   }
