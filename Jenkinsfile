@@ -15,6 +15,7 @@ pipeline {
       steps {
         sh '''mvn clean test -Dbrowser=firefox
 '''
+        bat 'mvn clean test -Dbrowser=firefox'
       }
     }
   }
