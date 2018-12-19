@@ -11,9 +11,23 @@ pipeline {
         echo 'Initialization'
       }
     }
-    stage('Test') {
+    stage('Test Firefox') {
+      parallel {
+        stage('Test Firefox') {
+          steps {
+            bat(script: 'mvn clean test -Dbrowser=firefox', returnStatus: true, returnStdout: true)
+          }
+        }
+        stage('Test Chrome') {
+          steps {
+            bat(script: 'mvn clean test -Dbrowser=chrome', returnStatus: true, returnStdout: true)
+          }
+        }
+      }
+    }
+    stage('Archive Results') {
       steps {
-        bat(script: 'mvn clean test -Dbrowser=firefox', returnStatus: true, returnStdout: true)
+        junit '**/target/surefire-reports/TEST-*.xml'
       }
     }
   }
