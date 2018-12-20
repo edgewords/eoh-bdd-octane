@@ -40,7 +40,7 @@ pipeline {
                   allowMissing: false,
                   alwaysLinkToLastBuild: false,
                   keepAll: true,
-                  reportDir: 'reports/cucumber-html-report',
+                  reportDir: 'reports/html-report',
                   reportFiles: 'index.html',
                   reportTitles: "BDD Report",
                   reportName: "BDD Report"
