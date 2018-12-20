@@ -11,14 +11,14 @@ pipeline {
         echo 'Initialization'
       }
     }
-    stage('Test Firefox') {
+    stage('Test') {
       parallel {
-        stage('Test Firefox') {
+        stage('Firefox') {
           steps {
             bat(script: 'mvn clean test -Dbrowser=firefox', returnStatus: true, returnStdout: true)
           }
         }
-        stage('Test Chrome') {
+        stage('Chrome') {
           steps {
             bat(script: 'mvn clean test -Dbrowser=chrome', returnStatus: true, returnStdout: true)
           }
@@ -26,8 +26,30 @@ pipeline {
       }
     }
     stage('Archive Results') {
-      steps {
-        junit '**/target/surefire-reports/TEST-*.xml'
+      parallel {
+        stage('Archive Results') {
+          steps {
+            junit '**/target/surefire-reports/TEST-*.xml'
+          }
+        }
+        stage('HTML Results') {
+          steps {
+            script {
+              script {
+                publishHTML(target: [
+                  allowMissing: false,
+                  alwaysLinkToLastBuild: false,
+                  keepAll: true,
+                  reportDir: 'reports/cucumber-html-report',
+                  reportFiles: 'index.html',
+                  reportTitles: "BDD Report",
+                  reportName: "BDD Report"
+                ])
+              }
+            }
+
+          }
+        }
       }
     }
   }
