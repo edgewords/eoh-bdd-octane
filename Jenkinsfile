@@ -13,7 +13,10 @@ pipeline {
 			    args '-v $HOME/.m2:/root/.m2'
 			    }
 		    }
-	  /* .. */
+	    
+	  steps {
+            bat(script: 'mvn clean test -Dbrowser=firefox', returnStatus: true, returnStdout: true)
+          }
     }
     stage('Test') {
       parallel {
