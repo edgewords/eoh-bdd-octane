@@ -6,18 +6,6 @@ pipeline {
 
   }
   stages {
-    stage('Maven Build') {
-	    agent {
-		    docker {
-			    image 'maven:3-alpine'
-			    args '-v $HOME/.m2:/root/.m2'
-			    }
-		    }
-	    
-	  steps {
-            bat(script: 'mvn clean test -Dbrowser=firefox', returnStatus: true, returnStdout: true)
-          }
-    }
     stage('Test') {
       parallel {
         stage('Firefox') {
