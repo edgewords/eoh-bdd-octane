@@ -1,7 +1,7 @@
 pipeline {
   agent {
     node {
-      label 'Tom_local'
+      label 'Tom_Local'
     }
 
   }
