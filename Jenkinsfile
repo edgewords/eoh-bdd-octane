@@ -47,15 +47,5 @@ pipeline {
         }
       }
     }
-    stage('Octane Results') {
-      steps {
-        script {
-          script {
-            publishGherkinResults()
-          }
-        }
-
-      }
-    }
   }
 }
