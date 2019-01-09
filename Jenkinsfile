@@ -47,5 +47,10 @@ pipeline {
         }
       }
     }
+    stage('Report Results') {
+      steps {
+        publishGherkinResults '**/*OctaneGherkinResults.xml'
+      }
+    }
   }
 }
