@@ -22,7 +22,7 @@ public class add_items_to_cart_steps {
 	public void that_I_am_on_the_Home_Page() throws Throwable {
 		String browser = System.getProperty("browser");
 	    System.out.println("Browser passed through is : " + browser);
-	    if (browser.equalsIgnoreCase("chrome")) {
+	    if (browser != null && browser.equalsIgnoreCase("chrome")) {
 	    	driver = new ChromeDriver(); //instantiate a browser
 	    }
 	    else {

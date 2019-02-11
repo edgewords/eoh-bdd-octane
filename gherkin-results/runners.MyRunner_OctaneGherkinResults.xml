@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<features version="1"><feature name="Add Items to Cart" path="src\test\java\features\Add Items to Cart-5054.feature" started="1542815457505" tag="@TID5054REV0.5.0"><file><![CDATA[#Auto generated Octane revision tag
-@TID5054REV0.5.0
+<features version="1"><feature name="Add Items to Cart" path="src\test\java\features\Add Items to Cart_5054.feature" started="1549627866801" tag="@TID5054REV0.6.0"><file><![CDATA[#Auto generated Octane revision tag
+@TID5054REV0.6.0
 Feature: Add Items to Cart
-#Find a cap and add to cart & check it exists in cart
-#another comment
+
 	Scenario: Add a Cap
 		Given That I am on the Home Page
 		When I search for a Cap and add it to the Cart
 		Then I can see it in the Cart
-]]></file><scenarios><scenario name="Add a Cap"><steps><step duration="5629689400" name="Given That I am on the Home Page" status="passed"/><step duration="5025752700" name="When I search for a Cap and add it to the Cart" status="passed"/><step duration="6850587300" name="Then I can see it in the Cart" status="passed"/></steps></scenario></scenarios></feature></features>
+]]></file><scenarios><scenario name="Add a Cap"><steps><step duration="6722601700" name="Given That I am on the Home Page" status="failed"><error_message><![CDATA[org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=dnsNotFound&u=https%3A//www.edgewordstraining.co.uk/demo-site/&c=UTF-8&f=regular&d=We%20can%E2%80%99t%20connect%20to%20the%20server%20at%20www.edgewordstraining.co.uk.
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-7TC4PPT', ip: '169.254.94.62', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 62.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 6836, moz:profile: C:\Users\tom\AppData\Local\..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 9515989a-2fe5-449d-bfec-6807a81f2375
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:276)
+	at code_bindings.add_items_to_cart_steps.that_I_am_on_the_Home_Page(add_items_to_cart_steps.java:31)
+	at ✽.Given That I am on the Home Page(Add Items to Cart_5054.feature:6)
+]]></error_message></step><step duration="0" name="When I search for a Cap and add it to the Cart" status="skipped"/><step duration="0" name="Then I can see it in the Cart" status="skipped"/></steps></scenario></scenarios></feature><feature name="Shopping Cart" path="src\test\java\features\Clear Cart-6069.feature" started="1549627873569" tag="@TID6069REV0.2.0"><file><![CDATA[#Auto generated Octane revision tag
+@TID6069REV0.2.0
+Feature: Shopping Cart
+
+	Scenario: Clear Cart
+		Given There are items inthe shopping cart
+		When I clear the cart
+		Then the cart should be empty
+]]></file><scenarios><scenario name="Clear Cart"><steps><step duration="4639100" name="Given There are items inthe shopping cart" status="failed"><error_message><![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at code_bindings.clear_cart_steps.there_are_items_inthe_shopping_cart(clear_cart_steps.java:15)
+	at ✽.Given There are items inthe shopping cart(Clear Cart-6069.feature:6)
+]]></error_message></step><step duration="0" name="When I clear the cart" status="skipped"/><step duration="0" name="Then the cart should be empty" status="skipped"/></steps></scenario></scenarios></feature></features>
